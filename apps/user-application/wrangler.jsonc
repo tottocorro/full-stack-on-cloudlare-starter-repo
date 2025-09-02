@@ -14,6 +14,20 @@
   "observability": {
     "enabled": true,
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "a6404604-fb43-4946-ad97-6cc92f33e820",
+      "experimental_remote": true
+    }				
+  ],
+  "services": [
+    {
+      "binding": "BACKEND_SERVICE",
+      "service": "data-service-stage",
+      "experimental_remote": true,
+    },
+  ],
   "env": {
     "stage": {
       // "name": "user-application-stage",
