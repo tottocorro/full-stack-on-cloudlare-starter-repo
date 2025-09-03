@@ -14,4 +14,55 @@
   "observability": {
     "enabled": true,
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "a6404604-fb43-4946-ad97-6cc92f33e820",
+      "experimental_remote": true
+    }				
+  ],
+  "services": [
+    {
+      "binding": "BACKEND_SERVICE",
+      "service": "data-service-stage",
+      "experimental_remote": true,
+    },
+  ],
+  "env": {
+    "stage": {
+      // "name": "user-application-stage",
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_id": "a6404604-fb43-4946-ad97-6cc92f33e820",
+          "experimental_remote": true
+        }				
+      ],
+      "services": [
+        {
+          "binding": "BACKEND_SERVICE",
+          "service": "data-service-stage",
+          "experimental_remote": true,
+        },
+      ]
+    },
+    "production": {
+      // "name": "user-application-production",
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_id": "7434dba2-8600-43eb-90d1-89093bd33cdc",
+          "experimental_remote": true
+        }				
+      ],
+      "services": [
+        {
+          "binding": "BACKEND_SERVICE",
+          "service": "data-service-production",
+          "experimental_remote": true,
+        },
+      ]
+    }
+  }
+
 }
