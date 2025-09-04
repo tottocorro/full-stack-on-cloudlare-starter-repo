@@ -31,6 +31,12 @@
   "env": {
     "stage": {
       // "name": "user-application-stage",
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "stage.imagecaptioner.com"
+        }
+      ],
       "d1_databases": [
         {
           "binding": "DB",
@@ -48,6 +54,12 @@
     },
     "production": {
       // "name": "user-application-production",
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "imagecaptioner.com"
+        }
+      ],
       "d1_databases": [
         {
           "binding": "DB",
