@@ -6,12 +6,12 @@
     "dev": "vite --port 3000 --mode development",
     "start": "vite --port 3000",
     "build": "vite build && tsc",
+    "stage:build": "vite build --mode stage && tsc",
     "production:build": "vite build --mode production && tsc",
     "serve": "vite preview",
     "test": "vitest run",
     "cf-typegen": "wrangler types --env-interface Env --env stage",
-    "deploy": "npm run build && wrangler deploy",
-    "stage:deploy": "npm run build && wrangler deploy",
+    "stage:deploy": "npm run stage:build && wrangler deploy",
     "production:deploy": "npm run production:build && wrangler deploy"
   },
   "dependencies": {
@@ -85,6 +85,6 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "web-vitals": "^4.2.4",
-    "wrangler": "^4.30.0"
+    "wrangler": "^4.34.0"
   }
 }

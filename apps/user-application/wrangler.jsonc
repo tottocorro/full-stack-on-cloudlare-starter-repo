@@ -10,12 +10,34 @@
   "assets": {
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/auth/*", "/trpc/*", "/click-socket"]
   },
   "observability": {
     "enabled": true,
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "a6404604-fb43-4946-ad97-6cc92f33e820",
+      "experimental_remote": true
+    }				
+  ],
+  "services": [
+    {
+      "binding": "BACKEND_SERVICE",
+      "service": "data-service-stage",
+      "experimental_remote": true,
+    },
+  ],
   "env": {
     "stage": {
+      // "name": "user-application-stage",
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "stage.imagecaptioner.com"
+        }
+      ],
       "d1_databases": [
         {
           "binding": "DB",
@@ -32,6 +54,13 @@
       ]
     },
     "production": {
+      // "name": "user-application-production",
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "imagecaptioner.com"
+        }
+      ],
       "d1_databases": [
         {
           "binding": "DB",
